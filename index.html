@@ -8,11 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            background-color: #f0f8ff; /* Light blue background */
+            background-color: #f0f8ff;
             color: #333;
         }
         header {
-            background-color: #004d99; /* Navy blue header */
+            background-color: #004d99;
             color: white;
             padding: 20px;
             text-align: center;
@@ -27,20 +27,24 @@
             padding: 30px;
             border-radius: 0 0 8px 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            text-align: center; /* Center the content inside the container */
         }
         .key-facts {
             list-style-type: none;
             padding: 0;
+            text-align: left; /* Keep text list aligned left */
         }
         .key-facts li {
-            background: #e6e6fa; /* Lavender background for facts */
+            background: #e6e6fa;
             margin-bottom: 5px;
             padding: 8px;
             border-left: 5px solid #004d99;
+        }
+        .popeye-image {
+            margin: 20px 0;
+            border: 3px solid #cc0000; /* Red border */
+            border-radius: 50%; /* Makes the image round */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -52,27 +56,18 @@
     </header>
 
     <div class="container">
+        
+        <img 
+            src="https://i.imgur.com/Kz8F3X5.png" 
+            alt="An illustration of Popeye the Sailor Man flexing his arm" 
+            width="150" 
+            class="popeye-image"
+        >
         <h2>Who is Popeye?</h2>
-        <p>
+        <p style="text-align: left;">
             Popeye the Sailor Man is a fictional cartoon character created by Elzie Crisler Segar. He first appeared in the daily King Features comic strip *Thimble Theatre* on January 17, 1929.
         </p>
-        <p>
-            Known for his distinctive squint, his anchor tattoos, and his signature catchphrase, "I yam what I yam!", Popeye gains superhuman strength instantly after consuming a can of spinach. This habit was introduced to encourage children to eat their vegetables.
-        </p>
-
-        <h2>Key Facts and Friends</h2>
-        <ul class="key-facts">
-            <li><strong>First Appearance:</strong> January 17, 1929</li>
-            <li><strong>Love Interest:</strong> Olive Oyl</li>
-            <li><strong>Arch-Rival:</strong> Bluto (sometimes called Brutus)</li>
-            <li><strong>Favorite Food:</strong> Spinach (the source of his strength)</li>
-            <li><strong>The Wimpy Connection:</strong> Popeye's friend, J. Wellington Wimpy, is known for his constant desire for hamburgers and the phrase, "I'll gladly pay you Tuesday for a hamburger today."</li>
-        </ul>
-
-        <p style="text-align: center; margin-top: 30px;">
-            **"I yam what I yam and that’s all what I yam!"**
-        </p>
-    </div>
+        </div>
 
 </body>
 </html>
