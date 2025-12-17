@@ -6,45 +6,57 @@
     <title>Popeye the Sailor Man</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
             background-color: #f0f8ff;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-color: #004d99;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             border-radius: 8px 8px 0 0;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
         }
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.2em;
+            letter-spacing: 1px;
         }
         .container {
             background-color: white;
             padding: 30px;
             border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center the content inside the container */
-        }
-        .key-facts {
-            list-style-type: none;
-            padding: 0;
-            text-align: left; /* Keep text list aligned left */
-        }
-        .key-facts li {
-            background: #e6e6fa;
-            margin-bottom: 5px;
-            padding: 8px;
-            border-left: 5px solid #004d99;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
         }
         .popeye-image {
-            margin: 20px 0;
-            border: 3px solid #cc0000; /* Red border */
-            border-radius: 50%; /* Makes the image round */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10px 0 20px 0;
+            border: 4px solid #cc0000;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* This ensures the image doesn't distort */
+            object-fit: cover;
+        }
+        h2 {
+            color: #004d99;
+            border-bottom: 2px solid #e6e6fa;
+            padding-bottom: 10px;
+        }
+        p {
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.1em;
         }
     </style>
 </head>
@@ -56,18 +68,27 @@
     </header>
 
     <div class="container">
-        
         <img 
             src="https://i.imgur.com/Kz8F3X5.png" 
-            alt="An illustration of Popeye the Sailor Man flexing his arm" 
-            width="150" 
+            alt="Popeye flexing" 
+            width="180" 
+            height="180"
             class="popeye-image"
         >
+
         <h2>Who is Popeye?</h2>
-        <p style="text-align: left;">
-            Popeye the Sailor Man is a fictional cartoon character created by Elzie Crisler Segar. He first appeared in the daily King Features comic strip *Thimble Theatre* on January 17, 1929.
+        <p>
+            Popeye the Sailor Man is a fictional cartoon character created by Elzie Crisler Segar. 
+            He first appeared in the daily King Features comic strip <em>Thimble Theatre</em> 
+            on January 17, 1929.
         </p>
-        </div>
+        
+        <p>
+            He is famous for his love of spinach, his pipe, and his loyalty to Olive Oyl. 
+            Whenever he's in a jam, a can of spinach gives him the "super-strength" 
+            needed to take down his rival, Bluto!
+        </p>
+    </div>
 
 </body>
 </html>
