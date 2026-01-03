@@ -3,135 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popeye the Sailor Man</title>
+    <title>Bernard Shepard | HR, Data & Education Advocate</title>
     <style>
-        /* General Page Setup */
+        :root {
+            --navy: #1a3a5f;
+            --orange: #ff8c00;
+            --light-blue: #e6f0fa;
+            --white: #ffffff;
+            --text: #333;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f0f8ff; /* Light blue background seen in image */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Navy Blue Header Section */
-        header {
-            background-color: #1a3a5f; /* Deep navy blue */
-            color: white;
-            padding: 20px 0;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        header p {
-            margin: 5px 0 0 0;
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        /* The Main Content Card */
-        .container {
-            background-color: white;
-            margin-top: 30px;
-            padding: 40px;
-            width: 90%;
-            max-width: 700px;
-            border-radius: 15px; /* Rounded corners like the image */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            text-align: center;
-        }
-
-        /* The Circular Popeye Image */
-        .popeye-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%; /* Makes it a perfect circle */
-            border: 4px solid #cc0000; /* Red border from image */
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        /* Text Styling */
-        h2 {
-            color: #1a3a5f;
-            text-align: left;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        p.description {
-            text-align: left;
+            background-color: var(--light-blue);
+            color: var(--text);
             line-height: 1.6;
-            color: #444;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--navy) 75%, var(--orange) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             margin-bottom: 25px;
         }
 
-        /* Key Facts List */
-        .facts-list {
-            text-align: left;
-            list-style: none;
-            padding: 0;
+        h2 {
+            color: var(--navy);
+            border-left: 5px solid var(--orange);
+            padding-left: 15px;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-top: 0;
         }
 
-        .facts-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 16px;
+        h3 { color: var(--orange); margin-bottom: 5px; font-size: 1.1rem; }
+
+        .meta { font-style: italic; color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+
+        /* Sidebar Styling */
+        .sidebar-card {
+            background: var(--navy);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            height: fit-content;
         }
 
-        .facts-list strong {
-            color: #1a3a5f;
-            width: 150px;
-            display: inline-block;
+        .sidebar-card h2 { color: var(--orange); border-left-color: var(--white); }
+        .sidebar-section { margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .sidebar-section:last-child { border-bottom: none; }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        /* The Famous Quote */
-        .quote {
-            margin-top: 30px;
-            font-style: italic;
-            font-size: 20px;
-            color: #333;
+        .skill-tag {
+            background: var(--light-blue);
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-align: center;
             font-weight: bold;
+            color: var(--navy);
+        }
+
+        @media (max-width: 850px) {
+            .container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Popeye the Sailor Man</h1>
-        <p>A Strong to the Finich Hero!</p>
-    </header>
-
-    <div class="container">
-        <img src="popeye_victory.png" alt="Popeye Victory" class="popeye-image">
-
-        <h2>1. Who is Popeye?</h2>
-        <p class="description">
-            Popeye the Sailor Man is a fictional character created by Elzie Crisler Segar. 
-            He first appeared in the King Features comic strip <em>Thimble Theatre</em> 
-            on January 17, 1929.
-        </p>
-
-        <h2>2. Key Facts and Friends</h2>
-        <ul class="facts-list">
-            <li><strong>First Appearance:</strong> January 17, 1929</li>
-            <li><strong>Love Interest:</strong> Olive Oyl</li>
-            <li><strong>Arch-Rival:</strong> Bluto (Brutus)</li>
-            <li><strong>Favorite Food:</strong> Spinach</li>
-            <li><strong>Famous Friend:</strong> J. Wellington Wimpy</li>
-        </ul>
-
-        <p class="quote">“I yam what I yam and that’s all what I yam!”</p>
+<header>
+    <h1>Bernard Shepard</h1>
+    <p>HR Professional • Educator • Community Advocate</p>
+    <div style="margin-top: 15px; font-size: 0.9rem;">
+        📍 St. Albans, Queens, NY | 📞 917-378-9485 | ✉️ Bshep9439@gmail.com
     </div>
+</header>
+
+<div class="container">
+    
+    <main>
+        <div class="card">
+            <h2>Mission Statement</h2>
+            <p>To foster a stimulating and inclusive learning environment by demonstrating an eagerness to contribute to the academic success and personal growth of students. I am dedicated to collaborating with fellow educators to innovate and enhance curricula while leveraging my data-driven HR background to optimize operational excellence.</p>
+        </div>
+
+        <div class="card">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Team Supervisor</h3>
+                <div class="meta">Ibex Global, Hampton, VA | Nov 2021 – Jan 2024</div>
+                <ul>
+                    <li>Managed payroll validation for 16+ agents and monitored team KPIs.</li>
+                    <li>Transformed operational data into actionable insights to drive team performance.</li>
+                </ul>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <div class="experience-item">
+                <h3>Youth Summit In-Tutor</h3>
+                <div class="meta">Shiloh Baptist Church Youth Ministry | 2020 – 2023</div>
+                <ul>
+                    <li>Provided 1-on-1 tutoring in Science, History, and English for grades 3-8.</li>
+                    <li>Developed customized lesson plans and assessed student progress to adjust teaching strategies.</li>
+                </ul>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <div class="experience-item">
+                <h3>Senior Counselor</h3>
+                <div class="meta">Black Spectrum Theater | 2012 – 2013</div>
+                <ul>
+                    <li>Oversaw rehearsal management, script breakdown, and technical cue coordination.</li>
+                    <li>Acted as the primary liaison between the director, cast, and parents for children's performances.</li>
+                </ul>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <div class="experience-item">
+                <h3>Camp Counselor</h3>
+                <div class="meta">PAL - Edward Byrne Center Camp | 2011 – 2012</div>
+                <ul>
+                    <li>Led sports, arts, and team-building exercises for youth in a safe, structured environment.</li>
+                    <li>Mentored campers to develop social skills, confidence, and independence.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <h3>B.S. in Digital Marketing</h3>
+            <div class="meta">Bryant & Stratton College | 2017 – 2021</div>
+            
+            <h3 style="margin-top:15px;">High School Diploma</h3>
+            <div class="meta">Saint Francis Preparatory | 2009 – 2012</div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="sidebar-card">
+            <h2>About Me</h2>
+            
+            <div class="sidebar-section">
+                <h3>Queens Roots</h3>
+                <p>Raised in St. Albans, I am fueled by the culture of Queens, from its legendary Hip-Hop history to its deep Jazz roots.</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Pop Culture Lore</h3>
+                <p>Niche comic enthusiast with an interest in the <strong>Dakotaverse</strong>, <strong>Frank E. Stein</strong>, and Golden Age heroes like <strong>Fred Raymond’s Human Torch</strong>.</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Advocacy</h3>
+                <p>Passionate about Civil Rights and community service. I strive to foster environments where African American students and professionals can thrive.</p>
+            </div>
+
+            <h3>Core Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-tag">Curriculum Innovation</div>
+                <div class="skill-tag">KPI Analysis</div>
+                <div class="skill-tag">Conflict Resolution</div>
+                <div class="skill-tag">Youth Mentorship</div>
+                <div class="skill-tag">MS Office Suite</div>
+                <div class="skill-tag">Event Coordination</div>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<footer style="text-align: center; padding: 30px; color: #666; font-size: 0.8rem;">
+    &copy; 2026 Bernard Shepard | Designed for Impact.
+</footer>
 
 </body>
 </html>
